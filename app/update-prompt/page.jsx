@@ -17,9 +17,13 @@ const EditPrompt = () => {
     tag: "",
   });
 
+  
+
   useEffect(() => {
     const getPromptDetails = async () => {
+      
       const response = await fetch(`/api/prompt/${promptId}`);
+      
       const data = await response.json();
 
       setPost({
@@ -28,7 +32,9 @@ const EditPrompt = () => {
       });
 
       if (promptId) getPromptDetails();
+      
     };
+    
   }, [promptId]);
 
   const updatePrompt = async (e) => {
