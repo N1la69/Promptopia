@@ -19,7 +19,6 @@ const Profile = ({ name, desc, data, handleEdit, handleDelete }) => {
           />
         ))}
       </div>
-
     </section>
   );
 };
